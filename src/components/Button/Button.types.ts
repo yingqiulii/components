@@ -7,7 +7,6 @@
 export interface ButtonProps {
   text: string;
   onClick?: () => void;
-  theme?: 'primary' | 'secondary';
+  theme?: "primary" | "secondary";
   disabled?: boolean;
 }
-

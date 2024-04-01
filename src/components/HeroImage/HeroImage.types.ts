@@ -1,4 +1,3 @@
-
 export interface HeroImageProps {
   imageUrl: string;
   altText: string;

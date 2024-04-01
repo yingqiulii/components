@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 // @ts-ignore
-import cardImage from './1.jpg';
+import cardImage from "./1.jpg";
 
 interface CardProps {
   title: string;
@@ -11,13 +11,13 @@ interface CardProps {
 }
 
 const CardContainer = styled.div<{ disabled?: boolean }>`
-  background-color: ${props => (props.disabled ? '#eee' : '#fff')};
+  background-color: ${(props) => (props.disabled ? "#eee" : "#fff")};
   padding: 16px;
   border-radius: 8px;
   border: 1px solid #ccc;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
-  opacity: ${props => (props.disabled ? 0.5 : 1)};
+  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
+  opacity: ${(props) => (props.disabled ? 0.5 : 1)};
   width: 20%;
 `;
 
@@ -31,7 +31,12 @@ const CardContent = styled.div`
   padding: 16px;
 `;
 
-const Card: React.FC<CardProps> = ({ title, content, disabled = false, imageUrl }) => {
+const Card: React.FC<CardProps> = ({
+  title,
+  content,
+  disabled = false,
+  imageUrl,
+}) => {
   return (
     <CardContainer data-testid="card" disabled={disabled}>
       <Image src={cardImage} alt="Card Image" />

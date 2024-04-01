@@ -1,5 +1,5 @@
-import React, { ReactNode } from 'react';
-import styled, { css } from 'styled-components';
+import React, { ReactNode } from "react";
+import styled, { css } from "styled-components";
 
 interface TableRowProps {
   children: ReactNode;
@@ -10,8 +10,8 @@ const StyledTableRow = styled.tr<{ disabled?: boolean }>`
   &:nth-child(even) {
     background-color: #f9f9f9;
   }
-  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
-  opacity: ${props => (props.disabled ? 0.5 : 1)};
+  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
+  opacity: ${(props) => (props.disabled ? 0.5 : 1)};
 `;
 
 const TableRow: React.FC<TableRowProps> = ({ children, disabled }) => {

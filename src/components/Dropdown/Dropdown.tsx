@@ -64,8 +64,8 @@
 // };
 
 // export default Dropdown;
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
 
 interface DropdownProps {
   options: string[];
@@ -100,11 +100,15 @@ const DropdownItem = styled.li`
 `;
 
 const DropdownButton = styled.button`
-cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
-opacity: ${props => (props.disabled ? 0.5 : 1)};ter')};
+cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
+opacity: ${(props) => (props.disabled ? 0.5 : 1)};ter')};
 `;
 
-const Dropdown: React.FC<DropdownProps> = ({ options, onSelect, disabled = false }) => {
+const Dropdown: React.FC<DropdownProps> = ({
+  options,
+  onSelect,
+  disabled = false,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
@@ -116,8 +120,11 @@ const Dropdown: React.FC<DropdownProps> = ({ options, onSelect, disabled = false
 
   return (
     <DropdownContainer>
-      <DropdownButton onClick={() => !disabled && setIsOpen(!isOpen)} disabled={disabled}>
-        {selectedOption || 'Select an option'}
+      <DropdownButton
+        onClick={() => !disabled && setIsOpen(!isOpen)}
+        disabled={disabled}
+      >
+        {selectedOption || "Select an option"}
       </DropdownButton>
       {isOpen && (
         <DropdownList>

@@ -9,7 +9,7 @@ RUN npm install
 
 COPY . .
 
-RUN npm run rollup
+RUN npm ci
 
 RUN npm run build-storybook
 

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
 
 interface RadioProps {
   label: string;
@@ -9,11 +9,16 @@ interface RadioProps {
 }
 
 const Input = styled.input`
-  opacity: ${(props) => (props.disabled ? '0.5' : '1')};
-  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
+  opacity: ${(props) => (props.disabled ? "0.5" : "1")};
+  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
 `;
 
-const Radio: React.FC<RadioProps> = ({ label, checked: checkedProp = false, onChange, disabled = false }) => {
+const Radio: React.FC<RadioProps> = ({
+  label,
+  checked: checkedProp = false,
+  onChange,
+  disabled = false,
+}) => {
   const [checked, setChecked] = useState(checkedProp);
 
   const handleChange = () => {

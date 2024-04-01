@@ -38,24 +38,24 @@
 
 // export const Disabled = Template.bind({});
 // Disabled.args = { disabled: true };
-import React from 'react';
+import React from "react";
 import { StoryFn, Meta } from "@storybook/react";
-import Table from './Table';
+import Table from "./Table";
 import { TableProps } from "./Tabel.types";
-import TableRow from './TableRow';
-import TableCell from './TableCell';
-import TableHeader from './TableHeader';
-import TableFooter from './TableFooter';
+import TableRow from "./TableRow";
+import TableCell from "./TableCell";
+import TableHeader from "./TableHeader";
+import TableFooter from "./TableFooter";
 
 export default {
-  title: 'Components/Table',
+  title: "Components/Table",
   component: Table,
   argTypes: {
-    backgroundColor: { control: 'color' },
+    backgroundColor: { control: "color" },
   },
 } as Meta;
 
-const Template: StoryFn<TableProps>= (args) => (
+const Template: StoryFn<TableProps> = (args) => (
   <>
     <style>
       {`
@@ -65,7 +65,9 @@ const Template: StoryFn<TableProps>= (args) => (
       `}
     </style>
     <Table {...args}>
-      <TableHeader backgroundColor={!args.disabled ? args.backgroundColor : undefined}>
+      <TableHeader
+        backgroundColor={!args.disabled ? args.backgroundColor : undefined}
+      >
         <TableRow>
           <TableCell>Header 1</TableCell>
           <TableCell>Header 2</TableCell>
@@ -84,7 +86,6 @@ const Template: StoryFn<TableProps>= (args) => (
     </Table>
   </>
 );
-
 
 export const Default = Template.bind({});
 Default.args = {};

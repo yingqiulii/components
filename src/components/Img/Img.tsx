@@ -1,5 +1,3 @@
-
-
 // import React from 'react';
 // import styled from 'styled-components';
 // // @ts-ignore
@@ -31,10 +29,10 @@
 // };
 
 // export default Img;
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 // @ts-ignore
-import imgSrc from './1.jpg';
+import imgSrc from "./1.jpg";
 
 interface ImgProps {
   src: string;
@@ -45,13 +43,19 @@ interface ImgProps {
 }
 
 const StyledImg = styled.img<{ disabled?: boolean }>`
-  opacity: ${(props) => (props.disabled ? '0.5' : '1')};
-  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
+  opacity: ${(props) => (props.disabled ? "0.5" : "1")};
+  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
   max-width: 30%;
   height: auto;
 `;
 
-const Img: React.FC<ImgProps> = ({ src, alt, width, height, disabled = false }) => {
+const Img: React.FC<ImgProps> = ({
+  src,
+  alt,
+  width,
+  height,
+  disabled = false,
+}) => {
   return (
     <StyledImg
       src={imgSrc}

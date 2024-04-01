@@ -20,13 +20,13 @@
 //     alert('Form submitted');
 //   },
 // };
-import React from 'react';
-import { Story, Meta } from '@storybook/react';
-import { Form } from './Form';
-import { Input } from '../Input'; // 确保路径正确
+import React from "react";
+import { Story, Meta } from "@storybook/react";
+import { Form } from "./Form";
+import { Input } from "../Input"; // 确保路径正确
 
 export default {
-  title: 'Form',
+  title: "Form",
   component: Form,
 } as Meta;
 
@@ -43,6 +43,6 @@ DefaultForm.args = {
   ),
   onSubmit: (e) => {
     e.preventDefault(); // 阻止表单默认提交事件
-    alert('Form submitted');
+    alert("Form submitted");
   },
 };

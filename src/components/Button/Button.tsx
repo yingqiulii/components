@@ -16,33 +16,43 @@
 
 // export default Button;
 // Button.tsx
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 interface ButtonProps {
   text: string;
   onClick?: () => void;
-  theme?: 'primary' | 'secondary';
+  theme?: "primary" | "secondary";
   disabled?: boolean;
 }
 
-const StyledButton = styled.button<{ disabled: boolean; theme: 'primary' | 'secondary' }>`
+const StyledButton = styled.button<{
+  disabled: boolean;
+  theme: "primary" | "secondary";
+}>`
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
-  background-color: ${(props) => (props.theme === 'primary' ? '#007bff' : '#6c757d')};
+  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
+  background-color: ${(props) =>
+    props.theme === "primary" ? "#007bff" : "#6c757d"};
   color: white;
   outline: none;
-  opacity: ${(props) => (props.disabled ? '0.5' : '1')};
+  opacity: ${(props) => (props.disabled ? "0.5" : "1")};
   transition: opacity 0.3s ease;
 
   &:hover {
-    background-color: ${(props) => (props.theme === 'primary' ? '#0056b3' : '#495057')};
+    background-color: ${(props) =>
+      props.theme === "primary" ? "#0056b3" : "#495057"};
   }
 `;
 
-const Button: React.FC<ButtonProps> = ({ text, onClick, theme = 'primary', disabled = false }) => {
+const Button: React.FC<ButtonProps> = ({
+  text,
+  onClick,
+  theme = "primary",
+  disabled = false,
+}) => {
   return (
     <StyledButton onClick={onClick} theme={theme} disabled={disabled}>
       {text}

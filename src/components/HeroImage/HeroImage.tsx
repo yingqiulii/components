@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 // @ts-ignore
-import imgSrc from './1.jpg';
+import imgSrc from "./1.jpg";
 
 interface HeroImageProps {
   imageUrl: string;
@@ -14,8 +14,8 @@ const Container = styled.div<{ disabled?: boolean }>`
   width: 100%;
   height: 300px;
   overflow: hidden;
-  opacity: ${(props) => (props.disabled ? '0.5' : '1')};
-  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'auto')};
+  opacity: ${(props) => (props.disabled ? "0.5" : "1")};
+  cursor: ${(props) => (props.disabled ? "not-allowed" : "auto")};
 `;
 
 const Image = styled.img`
@@ -30,9 +30,9 @@ const Overlay = styled.div<{ disabled?: boolean }>`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, ${(props) => (props.disabled ? '0.5' : '0')});
-  opacity: ${(props) => (props.disabled ? '0.5' : '1')};
-  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
+  background-color: rgba(0, 0, 0, ${(props) => (props.disabled ? "0.5" : "0")});
+  opacity: ${(props) => (props.disabled ? "0.5" : "1")};
+  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
 `;
 
 const Text = styled.div<{ disabled?: boolean }>`
@@ -40,16 +40,19 @@ const Text = styled.div<{ disabled?: boolean }>`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: ${(props) => (props.disabled ? '#aaa' : 'white')};
+  color: ${(props) => (props.disabled ? "#aaa" : "white")};
   text-align: center;
   font-size: 24px;
-  opacity: ${(props) => (props.disabled ? '0.5' : '1')};
-  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
+  opacity: ${(props) => (props.disabled ? "0.5" : "1")};
+  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
 `;
 
-const HeroImage: React.FC<HeroImageProps> = ({ imageUrl, altText, disabled = false }) => (
+const HeroImage: React.FC<HeroImageProps> = ({
+  imageUrl,
+  altText,
+  disabled = false,
+}) => (
   <Container disabled={disabled}>
-
     <Image src={imgSrc} alt={altText} />
     <Overlay disabled={disabled} />
     <Text disabled={disabled}>{altText}</Text>

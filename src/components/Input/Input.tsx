@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const StyledInput = styled.input`
   padding: 8px 16px;
@@ -20,6 +20,9 @@ type InputProps = {
   name: string;
 };
 
-export const Input: React.FC<InputProps> = ({ placeholder, disabled = false }) => {
+export const Input: React.FC<InputProps> = ({
+  placeholder,
+  disabled = false,
+}) => {
   return <StyledInput placeholder={placeholder} disabled={disabled} />;
 };

@@ -31,7 +31,6 @@ export default [
       postcss(),
     ],
     external: ["react", "react-dom"],
-
   },
   {
     input: "src/index.ts",

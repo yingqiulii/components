@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import Label from "./Label";
-import '@testing-library/jest-dom';
+import "@testing-library/jest-dom";
 
 describe("Label Component", () => {
   it("should render the label with default state", () => {
