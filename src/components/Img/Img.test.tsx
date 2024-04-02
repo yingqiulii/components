@@ -1,6 +1,8 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import Img from "./Img";
+import '@testing-library/jest-dom';
+
 
 test("renders Img component", () => {
   const { getByAltText } = render(<Img src="1.jpg" alt="test" />);

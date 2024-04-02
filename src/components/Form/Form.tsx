@@ -37,7 +37,7 @@ type FormProps = {
 
 export const Form = ({ children, onSubmit }: FormProps) => {
   return (
-    <form style={FormStyle} onSubmit={onSubmit}>
+    <form style={FormStyle} onSubmit={onSubmit} data-testid="my-form">
       {children}
     </form>
   );

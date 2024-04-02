@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
+import '@testing-library/jest-dom';
 import { Input } from "./Input"; // 调整路径以匹配你的文件结构
 
 describe("Input Component", () => {

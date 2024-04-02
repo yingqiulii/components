@@ -32,6 +32,8 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { Form } from "./Form";
 import { Input } from "../Input";
+import '@testing-library/jest-dom';
+
 
 describe("Form Component", () => {
   test("Form renders with input and submit button", () => {
@@ -54,8 +56,9 @@ describe("Form Component", () => {
       </Form>,
     );
 
-    const form = screen.getByRole("form");
-    fireEvent.submit(form);
+    const form = screen.getByTestId("my-form");
+fireEvent.submit(form);
+
 
     expect(handleSubmit).toHaveBeenCalledTimes(1);
   });
