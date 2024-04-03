@@ -1,27 +1,4 @@
-// import { StoryFn, Meta } from "@storybook/react";
-// import Button from "./Button";
 
-// export default {
-//   title: "ReactComponentLibrary/Button",
-//   component: Button,
-// } as Meta<typeof Button>;
-
-// const Template: StoryFn<typeof Button> = (args) => <Button {...args} />;
-
-// export const Primary = Template.bind({});
-// Primary.args = {
-//   label: "Button",
-//   theme: "primary",
-//   testIdPrefix: "button",
-// };
-
-// export const Secondary = Template.bind({});
-// Secondary.args = {
-//   label: "Button2",
-//   theme: "secondary",
-//   testIdPrefix: "button",
-// };
-// Button.stories.tsx
 import { StoryFn, Meta } from "@storybook/react";
 import Button from "./Button";
 import { userEvent, within } from '@storybook/test';

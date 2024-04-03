@@ -10,7 +10,8 @@
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
     "prettier-check": "prettier --check 'src/**/*.{js,jsx,ts,tsx,json,css}'",
     "prettier-format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css}'",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
@@ -37,6 +38,7 @@
     "@storybook/react": "^7.6.17",
     "@storybook/react-vite": "^7.6.17",
     "@storybook/test": "^7.6.17",
+    "@storybook/testing-library": "^0.2.2",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.1",
     "@types/jest": "^29.5.12",
