@@ -36,17 +36,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      # - name: Checkout code
+      #   uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: "20.10.0"
-          npm-version: '10.2.3'
+      # - name: Setup Node.js
+      #   uses: actions/setup-node@v2
+      #   with:
+      #     node-version: "20.10.0"
+      #     npm-version: '10.2.3'
 
-      - name: Install dependencies
-        run: npm install
+      # - name: Install dependencies
+      #   run: npm install
 
-      - name: Run tests
-        run: npm test
+      # - name: Run tests
+      #   run: npm test
+
+          - uses: actions/checkout@v2
+          - name: Setup Node.js
+            uses: actions/setup-node@v2
+            with:
+              node-version: '14'
+              npm-version: '10.2.3'
+          - name: Install Dependencies
+            run: npm install
+          - name: Install Jest Globally
+            run: npm install -g jest
+          - name: Run Tests
+            run: jest
