@@ -29,34 +29,6 @@
 #       # 如果你需要运行Prettier，请确保你的`package.json`中有一个对应的脚本
 #       # - name: Run Prettier
 #       #   run: npm run format
-# name: CI
-
-# on:
-#   push:
-#     branches:
-#       - main
-
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v2
-
-#       - name: Setup Node.js
-#         uses: actions/setup-node@v2
-#         with:
-#           node-version: "14"
-
-#       - name: Install dependencies
-#         run: npm install
-
-#       - name: Check formatting with Prettier
-#         run: npm run format
-
-#       - name: Run tests
-#         run: npm test
 name: CI
 
 on:
@@ -65,15 +37,21 @@ on:
       - main
 
 jobs:
-  build-and-test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build Docker image
-        run: docker build -t li_yingqiu_coding_assignment12 .
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
 
-      - name: Run tests in Docker container
-        run: docker run li_yingqiu_coding_assignment12
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
+
