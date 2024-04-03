@@ -19,17 +19,12 @@
 #           node-version: "14"
 
 #       - name: Install dependencies
-#         run: npm install
+#         run: npm ci
 
-#       - name: Check formatting with Prettier
-#         run: npm run format
+#       - name: Run tests
+#         run: npm test
 
-
-#       # 这里看起来是你重复添加了Prettier的步骤，所以我把它注释掉了
-#       # 如果你需要运行Prettier，请确保你的`package.json`中有一个对应的脚本
-#       # - name: Run Prettier
-#       #   run: npm run format
-name: CI
+name: Code Quality Check
 
 on:
   push:
@@ -50,8 +45,7 @@ jobs:
           node-version: "14"
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Run tests
         run: npm test
-
