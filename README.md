@@ -2,7 +2,6 @@
 
 This is a UI component library/toolkit built with React and Storybook.
 
-## Getting Started
 
 ### Prerequisites
 
