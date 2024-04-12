@@ -22,5 +22,5 @@ jobs:
           - name: Run Jest Tests
             run: npm run test:jest
           - name: Run Storybook Tests
-            run: npm run test:storybook
+            run: npx run test:storybook
 
