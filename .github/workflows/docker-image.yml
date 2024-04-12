@@ -20,4 +20,4 @@ jobs:
           - name: Install Jest Globally
             run: npm install -g jest
           - name: Run Tests
-            run: npm run test:jest && npx run test:storybook
+            run: npm run test:jest && npm run test:storybook
