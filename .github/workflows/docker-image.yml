@@ -21,5 +21,7 @@ jobs:
             run: npm install -g jest
           - name: Run Jest Tests
             run: npm run test:jest
+          - name: Set execute permissions for test-storybook
+            run: chmod +x $(npm bin)/test-storybook
           - name: Run Storybook Tests
-            run: npm run test:storybook
+            run: npm run test:storybook -- --url http://10.0.0.30:6006
