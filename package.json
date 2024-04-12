@@ -13,7 +13,6 @@
     "test:openHandles": "jest --detectOpenHandles",
     "test": "npm run test:jest && npm run test:storybook",
     "ci:test": "concurrently \"npm run storybook\" \"wait-on http://localhost:6006 && npm run test:storybook\""
-
   },
   "author": "",
   "license": "ISC",
