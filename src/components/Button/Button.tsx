@@ -1,21 +1,3 @@
-// import React from "react";
-// import { ButtonProps } from "./Button.types";
-
-// const Button: React.FC<ButtonProps> = ({ testIdPrefix, label, onClick, theme = "primary", disabled = false }) => {
-//   return (
-//     <button
-//       className={`button ${theme}`}
-//       onClick={onClick}
-//       disabled={disabled}
-//       data-testid={`${testIdPrefix}-button`}
-//     >
-//       {label}
-//     </button>
-//   );
-// };
-
-// export default Button;
-// Button.tsx
 import React from "react";
 import styled from "styled-components";
 

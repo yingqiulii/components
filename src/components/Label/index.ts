@@ -1,1 +1,2 @@
-export { default } from "./Label";
+export * from "./Label";
+export type * from "./Label.types";

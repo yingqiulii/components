@@ -1,5 +1,6 @@
 import React from "react";
 import { LabelProps } from "./Label.types";
+import styled from "styled-components";
 
 const Label: React.FC<LabelProps> = ({ text, disabled = false }) => {
   const labelClass = `label ${disabled ? "disabled" : ""}`;

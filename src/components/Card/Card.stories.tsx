@@ -52,12 +52,7 @@ Default.args = {
   content: 'Card Content',
   imageUrl: '/1.jpg',
 };
-// Add play function for Default Story
-Default.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  // Simulate user interaction, e.g., clicking on the card
-  // In this case, it's just an example, as there's no specific action defined for a click in this setup
-};
+
 
 export const Disabled = Template.bind({});
 Disabled.args = {
@@ -66,9 +61,4 @@ Disabled.args = {
   disabled: true,
   imageUrl: '/1.jpg',
 };
-// Add play function for Disabled Story
-Disabled.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  // Here, you could test if the card correctly shows its disabled state
-  // Since the card's behavior on interaction isn't detailed, we'll assume it's just for demonstration
-};
+

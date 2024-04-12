@@ -1,1 +1,2 @@
-export { default } from "./Img";
+export * from "./Img";
+export type * from "./Img.types";
