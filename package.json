@@ -6,7 +6,7 @@
     "start": "PORT=8083 react-scripts start",
     "build": "react-scripts build",
     "test:jest": "jest",
-    "test:storybook": "test-storybook",
+    "test:storybook": "npx test-storybook",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "build-storybook -o ./storybook-static",
