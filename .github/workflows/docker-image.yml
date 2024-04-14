@@ -8,20 +8,30 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    # steps:
+    #       - uses: actions/checkout@v2
+    #       - name: Setup Node.js
+    #         uses: actions/setup-node@v2
+    #         with:
+    #           node-version: '20.10.0'
+    #           npm-version: '10.2.3'
+    #       - name: Install Dependencies
+    #         run: npm install
+    #       - name: Install Jest Globally
+    #         run: npm install -g jest
+    #       - name: Run Jest Tests
+    #         run: npm run test:jest
+    #       - name: Run Storybook Tests
+    #         run: npm run test:storybook
     steps:
-          - uses: actions/checkout@v2
-          - name: Setup Node.js
-            uses: actions/setup-node@v2
-            with:
-              node-version: '20.10.0'
-              npm-version: '10.2.3'
-          - name: Install Dependencies
-            run: npm install
-          - name: Install Jest Globally
-            run: npm install -g jest
-          - name: Run Jest Tests
-            run: npm run test:jest
-          - name: Set execute permissions for test-storybook
-            run: chmod +x $(npm bin)/test-storybook
-          - name: Run Storybook Tests
-            run: npm run test:storybook -- --url http://10.0.0.30:6006
+      - uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - name: Install dependencies
+        run: npm install
+      - name: Install Playwright browsers
+        run: npx playwright install
+      - name: Run custom CI test script
+        run: npm run ci:test
