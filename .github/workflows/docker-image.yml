@@ -8,33 +8,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    # steps:
-    #       - uses: actions/checkout@v2
-    #       - name: Setup Node.js
-    #         uses: actions/setup-node@v2
-    #         with:
-    #           node-version: '20.10.0'
-    #           npm-version: '10.2.3'
-    #       - name: Install Dependencies
-    #         run: npm install
-    #       - name: Install Jest Globally
-    #         run: npm install -g jest
-    #       - name: Run Jest Tests
-    #         run: npm run test:jest
-    #       - name: Run Storybook Tests
-    #         run: npm run test:storybook
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-      - name: Install dependencies
-        run: npm install
-      - name: Install concurrently and run custom CI test script
-        run: |
-          npm install -g concurrently
-          export PATH=$PATH:./node_modules/.bin
-          npm run ci:test
+          - uses: actions/checkout@v2
+          - name: Setup Node.js
+            uses: actions/setup-node@v2
+            with:
+              node-version: '20.10.0'
+              npm-version: '10.2.3'
+          - name: Install Dependencies
+            run: npm install
+          - name: Install Jest Globally
+            run: npm install -g jest
+          - name: Run Tests
+            run: npm run test:jest
+
 
 
