@@ -31,5 +31,5 @@ jobs:
           node-version: '16'
       - name: Install dependencies
         run: npm install
-      - name: Run custom CI test script
-        run: npm run ci:test
+      - name: Install concurrently and run custom CI test script
+        run: npm install -g concurrently && npm run ci:test
