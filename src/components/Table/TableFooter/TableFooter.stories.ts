@@ -12,4 +12,13 @@ const Template: StoryFn<typeof TableFooter> = (args) => React.createElement(Tabl
 export const Default = Template.bind({});
 Default.args = {
   children: 'Table Footer',
+  backgroundColor: '#f0f0f0', // 设置背景颜色
 };
+
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  children: 'Disabled Table Footer',
+  disabled: true, // 设置为禁用状态
+};
+

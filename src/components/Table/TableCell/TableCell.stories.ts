@@ -7,9 +7,17 @@ export default {
   component: TableCell,
 } as Meta;
 
-const Template: StoryFn<typeof TableCell> = (args) =>  React.createElement(TableCell, { ...args });
+const Template: StoryFn<typeof TableCell> = (args) => React.createElement(TableCell, { ...args });
 
 export const Default = Template.bind({});
 Default.args = {
   children: 'Table Cell',
 };
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  children: 'Disabled Table Cell',
+  disabled: true, // 设置为禁用状态
+};
+
+

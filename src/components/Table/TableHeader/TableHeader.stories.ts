@@ -16,3 +16,8 @@ Default.args = {
   children: 'Table Header',
 };
 
+export const Disabled = Template.bind({});
+Disabled.args = {
+  children: 'Disabled Table Header',
+  disabled: true, // 设置为禁用状态
+};
