@@ -1,29 +1,3 @@
-// import React, { ReactNode } from 'react';
-// import styled, { css } from 'styled-components';
-
-// interface TableCellProps {
-//   children: ReactNode;
-//   disabled?: boolean;
-// }
-
-// const StyledTableCell = styled.td<{ disabled?: boolean }>`
-//   padding: 10px;
-//   border: 1px solid #ddd;
-//   ${(props) =>
-//     props.disabled &&
-//     css`
-//       opacity: 0.5;
-//       pointer-events: none;
-//     `}
-// `;
-
-// const TableCell: React.FC<TableCellProps> = ({ children, disabled }) => {
-//   const cellStyle = disabled ? { cursor: 'not-allowed' } : {};
-
-//   return <StyledTableCell disabled={disabled} style={cellStyle}>{children}</StyledTableCell>;
-// };
-
-// export default TableCell;
 import React from "react";
 import styled from "styled-components";
 

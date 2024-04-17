@@ -1,25 +1,4 @@
-// import React, { ReactNode } from 'react';
-// import styled, { css } from 'styled-components';
 
-// interface TableHeaderProps {
-//   children: ReactNode;
-//   disabled?: boolean;
-// }
-
-// const StyledTableHeader = styled.thead<{ disabled?: boolean }>`
-//   background-color: #234523;
-//   ${(props) =>
-//     props.disabled &&
-//     css`
-//       opacity: 0.5;
-//     `}
-// `;
-
-// const TableHeader: React.FC<TableHeaderProps> = ({ children, disabled }) => {
-//   return <StyledTableHeader disabled={disabled}>{children}</StyledTableHeader>;
-// };
-
-// export default TableHeader;
 import React, { ReactNode } from "react";
 import styled, { css } from "styled-components";
 

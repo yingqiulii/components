@@ -3,4 +3,5 @@ export interface RadioProps {
   checked?: boolean;
   onChange?: (checked: boolean) => void;
   disabled?: boolean;
+  backgroundColor?: string;
 }

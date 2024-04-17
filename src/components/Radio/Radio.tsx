@@ -3,10 +3,18 @@ import styled from "styled-components";
 
 interface RadioProps {
   label: string;
-  checked?: boolean;
   onChange?: (checked: boolean) => void;
   disabled?: boolean;
+  'data-testid'?: string;
+  backgroundColor?: string;
 }
+
+const StyledLabel = styled.label<{ disabled?: boolean; backgroundColor?: string }>`
+  display: inline-block;
+  position: relative;
+  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
+  background-color: ${(props) => (props.disabled ? "transparent" : props.backgroundColor)};
+`;
 
 const Input = styled.input`
   opacity: ${(props) => (props.disabled ? "0.5" : "1")};
@@ -15,30 +23,34 @@ const Input = styled.input`
 
 const Radio: React.FC<RadioProps> = ({
   label,
-  checked: checkedProp = false,
   onChange,
   disabled = false,
+  'data-testid': testId,
+  backgroundColor,
 }) => {
-  const [checked, setChecked] = useState(checkedProp);
+  const [checked, setChecked] = useState(false);
 
   const handleChange = () => {
-    const newChecked = !checked;
-    setChecked(newChecked);
-    if (onChange) {
-      onChange(newChecked);
+    if (!disabled) {
+      const newChecked = !checked;
+      setChecked(newChecked);
+      if (onChange) {
+        onChange(newChecked);
+      }
     }
   };
 
   return (
-    <label>
+    <StyledLabel disabled={disabled} backgroundColor={backgroundColor}>
       <Input
         type="radio"
         checked={checked}
         onChange={handleChange}
         disabled={disabled}
+        data-testid={testId}
       />
       {label}
-    </label>
+    </StyledLabel>
   );
 };
 

@@ -1,18 +1,22 @@
 import React from "react";
-import { LabelProps } from "./Label.types";
 import styled from "styled-components";
+import { LabelProps } from "./Label.types";
 
-const Label: React.FC<LabelProps> = ({ text, disabled = false }) => {
-  const labelClass = `label ${disabled ? "disabled" : ""}`;
-  // const labelStyle = disabled ? { cursor: 'not-allowed' } : { cursor: 'pointer' };
-  const labelStyle = disabled
-    ? { cursor: "not-allowed", backgroundColor: "#231232" }
-    : { cursor: "pointer", backgroundColor: "transparent" };
+interface StyledLabelProps {
+  disabled?: boolean;
+  backgroundColor?: string;
+}
 
+const StyledLabel = styled.label<StyledLabelProps>`
+  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
+  background-color: ${(props) => (props.disabled ? "#231232" : props.backgroundColor || "transparent")};
+`;
+
+const Label: React.FC<LabelProps> = ({ text, disabled = false, backgroundColor }) => {
   return (
-    <label className={labelClass} style={labelStyle}>
+    <StyledLabel disabled={disabled} backgroundColor={backgroundColor}>
       {text}
-    </label>
+    </StyledLabel>
   );
 };
 

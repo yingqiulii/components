@@ -3,4 +3,5 @@ export interface CardProps {
   content: string;
   disabled?: boolean;
   imageUrl?: string;
+  backgroundColor?: string;
 }
